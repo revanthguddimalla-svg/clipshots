@@ -11,9 +11,10 @@ const publicRouter = require("./routes/public")
 const {authAuth} = require("./middlewares/authAuth")
 const {userAuth} = require("./middlewares/userAuth")
 const {authenticate} = require("./middlewares/authenticate")
+const cors = require("cors")
 const app=express();
 
-
+app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 app.use(authenticate)

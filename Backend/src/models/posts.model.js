@@ -29,7 +29,9 @@ const postSchema=mongoose.Schema({
         }
     }],
     default : []
-    }
+    },
+},{
+    timestamps : true
 })
 
 
